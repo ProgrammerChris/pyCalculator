@@ -1,0 +1,84 @@
+#:kivy 1.10.0
+
+<Actionbtn@Button>
+    on_press: app.button_action(self.text)
+
+<Calculator>:
+    Label:
+        padding_x: 20
+        id: screen
+        text: app.screen
+        text_size: self.size
+        font_size: 32
+        halign: 'right'
+        valign: 'middle'
+        size: root.width, root.height - root.height * 0.75
+        pos: root.y, 315
+
+    GridLayout:
+        size: root.width, root.height - 135
+        rows: 5
+        cols: 4
+
+        Button:
+            id: clear
+            text: 'C'
+            # Clear screen
+            on_press: app.screen = ''
+        Actionbtn:
+            id: Backspace
+            text: '<--'
+        Actionbtn:
+            id: modulo
+            text: '%'
+        Actionbtn:
+            id: divide
+            text: '/'
+        Actionbtn:
+            id: seven
+            text: '7'
+        Actionbtn:
+            id: eight
+            text: '8'
+        Actionbtn:
+            id: nine
+            text: '9'
+        Actionbtn:
+            id: multiply
+            text: '*'
+        Actionbtn:
+            id: four
+            text: '4'
+        Actionbtn:
+            id: five
+            text: '5'
+        Actionbtn:
+            id: six
+            text: '6'
+        Actionbtn:
+            id: subtract
+            text: '-'
+        Actionbtn:
+            id: one
+            text: '1'
+        Actionbtn:
+            id: two
+            text: '2'
+        Actionbtn:
+            id: three
+            text: '3'
+        Actionbtn:
+            id: add
+            text: '+'
+        Actionbtn:
+            id: negation
+            text: '+/-'
+        Actionbtn:
+            id: zero
+            text: '0'
+        Actionbtn:
+            id: comma
+            text: '.'
+        Actionbtn:
+            id: equals
+            text: '='
